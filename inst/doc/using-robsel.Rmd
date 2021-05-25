@@ -1,0 +1,56 @@
+---
+title: "Using the robsel package"
+#output: rmarkdown::html_vignette
+output: pdf_document
+vignette: >
+  %\VignetteIndexEntry{Using RobSel}
+  %\VignetteEngine{knitr::rmarkdown}
+  \usepackage[utf8]{inputenc}
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+This vignette illustrate the basic usage of the `robsel` package to estimate of the regularization parameter for Graphical Lasso.
+
+## Data
+We use a 100-by-5 matrix from generate from normal distribution.
+```{r}
+x <- matrix(rnorm(100*5),ncol=5)
+```
+
+
+## Using `robsel` functions
+
+### Estimate of the regularization parameter for Graphical Lasso
+The function `robsel` estimates $\lambda$, a regularization parameter for Graphical Lasso at a prespecified confidence level $\alpha$.
+```{r}
+library(robsel)
+lambda <- robsel(x)
+lambda
+```
+
+### Graphical Lasso algorithm with $\lambda$ from Robust Selection
+The function `robsel.glasso` returns estimates a sparse inverse covariance matrix using Graphical Lasso with regularization parameter estimated from Robust Selection
+```{r}
+A <- robsel.glasso(x)
+A
+```
+
+### Use RobSel with multiple prespecified confidence levels
+We can use multiple $\alpha$ simultaneously with Robust Selection
+```{r}
+alphas <- c(0.1, 0.5, 0.9)
+lambdas <- robsel(x, alphas)
+lambdas
+```
+
+```{r}
+robsel.fits <- robsel.glasso(x, alphas)
+robsel.fits
+```
+

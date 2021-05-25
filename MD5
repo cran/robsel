@@ -1,0 +1,17 @@
+895ee123d91c967819d58ffc1f4add64 *DESCRIPTION
+d3e03cb9b7516972cc2aaa3c2494a1c2 *NAMESPACE
+6d467bda2b5aab4caef40637641cc2af *NEWS.md
+9dbd702e834fd456dd41b0d46fbee103 *R/RcppExports.R
+f5f77c854f838ec88e14ded458beecda *R/glasso.R
+729e096d3f7b0655fa9a3feadd7b62eb *R/robsel.R
+e4cb3084c523e6e4894c2f48e492c3cf *README.md
+2479b400a3278bdc834512e662af0e5c *build/vignette.rds
+432cfec562c0f3e0d1be0862c1a6784b *inst/doc/using-robsel.R
+b6c3c940f5e8f0415f713e2dab11a628 *inst/doc/using-robsel.Rmd
+34b6cebb34ac086280b74f614fb7e617 *inst/doc/using-robsel.pdf
+32cb276b6dcaf4f2afe9e06868a42cfa *man/figures/README-pressure-1.png
+15bc27d2fb6885e67de22b11827179dc *man/robsel.Rd
+35f7a2c70d51f413b5c2f6f0de124a87 *man/robsel.glasso.Rd
+2ffed23b40b07a38e2e476d8fc7b7e6b *src/RcppExports.cpp
+8573dbdc662567ff4bc55f7a831f3d94 *src/rwp_rcpp.cpp
+b6c3c940f5e8f0415f713e2dab11a628 *vignettes/using-robsel.Rmd
